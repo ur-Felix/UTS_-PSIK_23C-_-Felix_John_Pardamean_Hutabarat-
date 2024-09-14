@@ -34,6 +34,7 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
+    overflow: hidden; /* Menyembunyikan overflow pada header */
 }
 
 /* Header Container */
@@ -41,15 +42,15 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%; /* Menggunakan 100% lebar untuk perangkat kecil */
+    margin: 0;
     overflow: hidden; /* Menyembunyikan overflow */
 }
 
 /* Site Name */
 .site-name {
     font-family: 'Courgette', cursive;
-    font-size: 30px; /* Ukuran font lebih besar */
+    font-size: 28px; /* Ukuran font lebih kecil untuk perangkat kecil */
     color: #03a9f4;
     letter-spacing: 1px;
     margin-right: auto; /* Memindahkan nama ke kiri */
@@ -70,16 +71,16 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Menyesuaikan margin untuk perangkat kecil */
 }
 
 nav ul li a {
     color: #e0e0e0;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat kecil */
     font-family: 'Poppins', sans-serif;
     transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-    padding: 10px 20px; /* Menambah padding agar lebih mudah diklik */
+    padding: 8px 16px; /* Menyesuaikan padding untuk perangkat kecil */
     border-radius: 4px; /* Menambah border radius agar sudutnya melengkung */
 }
 
@@ -91,8 +92,8 @@ nav ul li a:hover {
 
 /* Bagian */
 section {
-    padding: 80px 20px;
-    max-width: 1000px;
+    padding: 60px 10px; /* Menyesuaikan padding untuk perangkat kecil */
+    max-width: 100%;
     margin: auto;
     text-align: center;
     background: rgba(0, 0, 0, 0.7); /* Background semi-transparan */
@@ -102,23 +103,23 @@ section {
 
 /* Bagian Home */
 section#home {
-    padding: 120px 20px;
+    padding: 100px 10px; /* Menyesuaikan padding untuk perangkat kecil */
 }
 
 /* Home Content */
 .home-content {
     position: relative;
     z-index: 1;
-    margin-bottom: 50px; /* Menambah jarak bawah untuk memberi ruang lebih antara konten */
+    margin-bottom: 30px; /* Menambah jarak bawah untuk memberi ruang lebih antara konten */
 }
 
 /* Profile Image */
 .profile-img {
-    width: 250px; /* Memperbesar ukuran foto profil */
-    height: 250px; /* Memperbesar ukuran foto profil */
+    width: 200px; /* Menyesuaikan ukuran foto profil */
+    height: 200px; /* Menyesuaikan ukuran foto profil */
     border-radius: 50%;
     border: 4px solid #03a9f4;
-    margin-bottom: 30px; /* Menambah jarak bawah agar tidak mengganggu elemen lain */
+    margin-bottom: 20px; /* Menambah jarak bawah agar tidak mengganggu elemen lain */
     object-fit: cover;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -133,7 +134,7 @@ section#home {
 .btn-explore {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Menyesuaikan padding untuk perangkat kecil */
     background-color: #03a9f4;
     color: white;
     border-radius: 4px;
@@ -153,8 +154,8 @@ section#home {
 
 /* Heading */
 section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 28px; /* Menyesuaikan ukuran font untuk perangkat kecil */
+    margin-bottom: 20px;
     font-family: 'Courgette', cursive;
 }
 
@@ -162,7 +163,7 @@ section h2 {
 section#skills, section#education {
     background: rgba(0, 0, 0, 0.6); /* Background semi-transparan */
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
 }
 
 section#skills ul, section#education ul {
@@ -173,14 +174,14 @@ section#skills ul, section#education ul {
 }
 
 section#skills li, section#education li {
-    margin-bottom: 15px; /* Menambah jarak antara item */
-    padding: 10px; /* Padding item */
+    margin-bottom: 10px; /* Menambah jarak antara item */
+    padding: 8px; /* Padding item */
     border-radius: 8px; /* Border radius item */
     display: flex;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff; /* Warna teks */
-    font-size: 18px;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat kecil */
     background: rgba(0, 0, 0, 0.6); /* Background semi-transparan */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
 }
@@ -188,7 +189,7 @@ section#skills li, section#education li {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px; /* Menyesuaikan padding untuk perangkat kecil */
     background: #000000;
     color: white;
     position: fixed;
@@ -199,6 +200,7 @@ footer {
 
 footer p {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat kecil */
 }
 
 /* Contact Section */
@@ -211,7 +213,7 @@ footer p {
 }
 
 .contact-info p {
-    font-size: 18px;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat kecil */
 }
 
 .contact-info a {
@@ -229,7 +231,7 @@ footer p {
 
 .social-icon {
     color: #03a9f4;
-    font-size: 18px;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk perangkat kecil */
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Tambahkan efek bayangan teks */
 }
@@ -239,43 +241,59 @@ footer p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks saat hover */
 }
 
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
+/* Media Queries untuk Resolusi 720 x 1600 Piksel */
+@media (max-width: 720px) {
     .header-container {
         flex-direction: column;
         text-align: center;
     }
 
     nav {
-        overflow-x: auto; /* Menambahkan scroll horizontal pada perangkat kecil */
-        white-space: nowrap; /* Menghindari pemecahan baris pada item menu */
+        overflow-x: scroll;
     }
 
     nav ul {
-        flex-direction: row;
+        display: block;
     }
 
     nav ul li {
-        margin: 10px;
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .site-name {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 60px 10px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn-explore {
+        padding: 8px 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
     }
 }
 
 @media (max-width: 480px) {
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .btn-explore {
         padding: 6px 12px;
-        font-size: 14px;
     }
 
-    nav ul li {
-        margin: 5px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
+    section h2 {
+        font-size: 20px;
     }
 }
