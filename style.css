@@ -8,7 +8,6 @@ body {
     line-height: 1.6;
     background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient latar belakang */
     color: #ffffff;
-    margin: 0; /* Menambahkan margin 0 untuk menghindari spasi ekstra */
 }
 
 /* Reset dan Box-Sizing */
@@ -44,6 +43,7 @@ header {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden; /* Menyembunyikan overflow */
 }
 
 /* Site Name */
@@ -58,6 +58,8 @@ header {
 /* Navigation */
 nav {
     flex: 1;
+    overflow-x: auto; /* Menambahkan scroll horizontal jika diperlukan */
+    white-space: nowrap; /* Menghindari pemecahan baris pada item menu */
 }
 
 nav ul {
@@ -237,64 +239,43 @@ footer p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks saat hover */
 }
 
-/* Media Queries */
+/* Media Queries untuk Responsivitas */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .site-name {
-        margin-bottom: 10px;
+    nav {
+        overflow-x: auto; /* Menambahkan scroll horizontal pada perangkat kecil */
+        white-space: nowrap; /* Menghindari pemecahan baris pada item menu */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .profile-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    section {
-        padding: 60px 20px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    .btn-explore {
-        padding: 8px 16px;
-        font-size: 16px;
+        margin: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    section {
-        padding: 40px 15px;
-    }
-
-    section h2 {
-        font-size: 24px;
+        width: 200px;
+        height: 200px;
     }
 
     .btn-explore {
         padding: 6px 12px;
         font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
     }
 }
