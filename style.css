@@ -8,8 +8,7 @@ body {
     line-height: 1.6;
     background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient latar belakang */
     color: #ffffff;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Menambahkan margin 0 untuk menghindari spasi ekstra */
 }
 
 /* Reset dan Box-Sizing */
@@ -238,18 +237,19 @@ footer p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks saat hover */
 }
 
-/* Responsive Design - Media Queries */
-@media screen and (max-width: 768px) {
-    header {
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-container {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .site-name {
+        margin-bottom: 10px;
     }
 
     nav ul {
         flex-direction: column;
-        margin: 0;
-        padding: 0;
     }
 
     nav ul li {
@@ -258,54 +258,43 @@ footer p {
 
     nav ul li a {
         font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .site-name {
-        font-size: 24px;
-        margin-bottom: 10px;
     }
 
     .profile-img {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
 
     section {
-        padding: 60px 10px;
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
     }
 
     .btn-explore {
         padding: 8px 16px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    header {
-        padding: 8px 15px;
-    }
-
-    .site-name {
-        font-size: 20px;
-    }
-
+@media (max-width: 480px) {
     .profile-img {
         width: 150px;
         height: 150px;
     }
 
-    nav ul li a {
-        font-size: 14px;
-        padding: 8px 12px;
+    section {
+        padding: 40px 15px;
     }
 
-    section {
-        padding: 50px 8px;
+    section h2 {
+        font-size: 24px;
     }
 
     .btn-explore {
         padding: 6px 12px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
